@@ -221,3 +221,7 @@ input[type="button"]{
       width: 80%;
   }
 }
+
+.noEncontrado{
+  color: red;
+}

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { GuardarEnStorage } from "../helpers/GuardarEnStorage";
 
-
-const Crear = () => {
+// eslint-disable-next-line react/prop-types
+const Crear = ({setListadoState}) => {
 
   const tituloComponente = "Anadir Pelicula";
   const [peliState, setPeliState] = useState({
@@ -31,8 +31,15 @@ const Crear = () => {
     //Guardar estado
     setPeliState(peli);
 
+    // Actualizar el listado del estado original
+      setListadoState(elementos => {
+        return {...elementos, peli};
+      });
+
     // Guardar en el localStorage
       GuardarEnStorage("pelis", peli);
+
+    
 
   };
 
@@ -45,9 +52,6 @@ const Crear = () => {
                 <strong>
                   {(titulo && descripcion) && "Has creado la pelicua: " + titulo}
                 </strong>
-
-                
-
                 <form onSubmit={conseguirDatosFrom}> 
                     <input type="text" id="titulo" name="titulo" placeholder="Titulo" />
                     <textarea id="descripcion" name="descripcion" placeholder="Descripción"></textarea>
@@ -55,6 +59,6 @@ const Crear = () => {
                 </form>
             </div>
   )
-}
+};
 
 export default Crear;
