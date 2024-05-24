@@ -98,7 +98,7 @@ header nav ul{
   color: rgb(98, 97, 97);
   font-weight: lighter;
 }
-.home a{
+.home .title a{
   padding: 5px;
   border-radius: 5px;
   color: white;
@@ -145,6 +145,65 @@ input[type="submit"], button{
   margin-bottom: 15px;
   cursor: pointer;
 }
-.home a:hover, input[type="submit"]:hover, button:hover{
+.home .title a:hover, input[type="submit"]:hover, button:hover{
   background-color: #e99c90;
+}
+
+.works{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.work-item{
+  flex-basis: 45%;
+  flex-grow: 1;
+  margin: 15px;
+}
+.work-item .mask{
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  box-shadow:  0px 5px 15px #ddd;
+}
+.work-item img{
+  width: 100%;
+  transition: all 500ms;
+}
+
+.work-item .mask img:hover{
+  width: 115%;
+}
+.work-item h2{
+  display: block;
+  font-size: 30px;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.work-item a{
+  color: black;
+  text-decoration: none;
+  transition: all 300ms;
+}
+.work-item a:hover{
+  color: #fa4529;
+}
+.work-item h3{
+  display: block;
+  color: gray;
+  padding-top: 10px;
+  margin-top: 0px;
+  border-top: 1px solid #ddd;
+
+}
+
+.page-work mask{
+  height: 300px;
+  overflow: hidden;
+  box-shadow:  0px 5px 15px #ddd;
+}
+
+.page-work img{
+  width: 100%;
 }

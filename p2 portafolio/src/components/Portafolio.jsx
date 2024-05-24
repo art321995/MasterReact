@@ -1,20 +1,17 @@
-import { trabajos } from "../data/trabajos"
+
+import ListadoTrabajos from "./ListadoTrbajos";
 
 const Portafolio = () => {
   return (
     <div className='page'>
       <h1 className="heading">Portafolio</h1>  
 
-      {
-        trabajos.map(trabajo => {
-          <article>
-            <h2>{trabajo.nombre}</h2>
-          </article>
-        })
-      } 
+      <ListadoTrabajos />
+
+      
     </div>
   )
 }
 
-export default Portafolio
+export default Portafolio;
 
